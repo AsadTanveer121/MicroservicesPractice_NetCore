@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Asad_MicroServicesPractice.props" />
+</Project>
