@@ -20,19 +20,11 @@ namespace Asad_MicroServicesPractice.Controllers
         }
 
         [HttpGet]
-       public  async Task<ActionResult> Get()
+        public IActionResult Get()
         {
-            var product = await _productsRepository.GetProducts();
-            return new OkObjectResult(product);
+            var products = _productsRepository.GetProducts();
+            return new OkObjectResult(products);
         }
-
-
-        //[HttpGet]
-        //public IActionResult Get()
-        //{
-        //    var products = _productsRepository.GetProducts();
-        //    return new OkObjectResult(products);
-        //}
 
         [HttpGet("{id}", Name = "Get")]
         public IActionResult Get(int id)
